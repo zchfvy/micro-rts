@@ -1,0 +1,9 @@
+Library
+Temp
+.vs
+*.sln
+*.CSharp.csproj
+*.CSharp.Editor.csproj
+
+*.exe
+*_Data
