@@ -6,29 +6,17 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public static class UnitComponentsLookup {
+public static class GlobalsComponentsLookup {
 
-    public const int Asset = 0;
-    public const int Destination = 1;
-    public const int MoveSpeed = 2;
-    public const int Position = 3;
-    public const int View = 4;
+    public const int Clock = 0;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 1;
 
     public static readonly string[] componentNames = {
-        "Asset",
-        "Destination",
-        "MoveSpeed",
-        "Position",
-        "View"
+        "Clock"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(AssetComponent),
-        typeof(DestinationComponent),
-        typeof(MoveSpeedComponent),
-        typeof(PositionComponent),
-        typeof(ViewComponent)
+        typeof(Clock)
     };
 }

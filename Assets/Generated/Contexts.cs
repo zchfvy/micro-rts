@@ -33,15 +33,21 @@ public partial class Contexts : IContexts {
     }
 
     public BulletContext bullet { get; set; }
+    public GlobalsContext globals { get; set; }
+    public InputContext input { get; set; }
     public UnitContext unit { get; set; }
 
-    public IContext[] allContexts { get { return new IContext [] { bullet, unit }; } }
+    public IContext[] allContexts { get { return new IContext [] { bullet, globals, input, unit }; } }
 
     public void SetAllContexts() {
         bullet = new BulletContext();
+        globals = new GlobalsContext();
+        input = new InputContext();
         unit = new UnitContext();
 
         CreateContextObserver(bullet);
+        CreateContextObserver(globals);
+        CreateContextObserver(input);
         CreateContextObserver(unit);
     }
 }
