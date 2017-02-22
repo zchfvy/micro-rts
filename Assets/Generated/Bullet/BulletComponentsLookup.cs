@@ -8,15 +8,33 @@
 //------------------------------------------------------------------------------
 public static class BulletComponentsLookup {
 
+    public const int Asset = 0;
+    public const int DealDamage = 1;
+    public const int Destroy = 2;
+    public const int MoveSpeed = 3;
+    public const int Position = 4;
+    public const int Target = 5;
+    public const int View = 6;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
-
+        "Asset",
+        "DealDamage",
+        "Destroy",
+        "MoveSpeed",
+        "Position",
+        "Target",
+        "View"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(AssetComponent),
+        typeof(DealDamageComponent),
+        typeof(DestroyComponent),
+        typeof(MoveSpeedComponent),
+        typeof(PositionComponent),
+        typeof(TargetComponent),
+        typeof(ViewComponent)
     };
 }

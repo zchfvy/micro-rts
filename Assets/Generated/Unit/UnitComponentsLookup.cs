@@ -9,26 +9,41 @@
 public static class UnitComponentsLookup {
 
     public const int Asset = 0;
-    public const int Destination = 1;
-    public const int MoveSpeed = 2;
-    public const int Position = 3;
-    public const int View = 4;
+    public const int AttackTarget = 1;
+    public const int DealDamage = 2;
+    public const int Destination = 3;
+    public const int Destroy = 4;
+    public const int MoveSpeed = 5;
+    public const int Position = 6;
+    public const int ShootingCooldown = 7;
+    public const int Team = 8;
+    public const int View = 9;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "Asset",
+        "AttackTarget",
+        "DealDamage",
         "Destination",
+        "Destroy",
         "MoveSpeed",
         "Position",
+        "ShootingCooldown",
+        "Team",
         "View"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(AssetComponent),
+        typeof(AttackTargetComponent),
+        typeof(DealDamageComponent),
         typeof(DestinationComponent),
+        typeof(DestroyComponent),
         typeof(MoveSpeedComponent),
         typeof(PositionComponent),
+        typeof(ShootingCooldownComponent),
+        typeof(Team),
         typeof(ViewComponent)
     };
 }

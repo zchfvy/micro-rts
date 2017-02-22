@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Unit]
+[Unit, Bullet]
 public class AssetComponent : IComponent {
     public string name;
 }

@@ -45,10 +45,27 @@ class Universe : IDisposable {
         var systems = new Feature("Systems");
 
         systems.Add(new ProcessInputDestination(Contexts.input));
-
-        systems.Add(new AddUnitView(Contexts.unit));
-        systems.Add(new UpdateUnitViewPosition(Contexts.unit));
         systems.Add(new UpdateUnitPosition(Contexts.unit, Contexts.globals));
+        systems.Add(new UpdateUnitShooting(Contexts.unit));
+        systems.Add(new UpdateShootingCooldown(Contexts.unit, Contexts.globals));
+        systems.Add(new UnitAttackSystem(Contexts.unit, Contexts.bullet));
+        systems.Add(new UpdateBulletPosition(Contexts.bullet, Contexts.globals));
+        systems.Add(new DealUnitDamage(Contexts.unit));
+
+
+        // View systems, just graphical
+        systems.Add(new AddUnitView(Contexts.unit));
+        systems.Add(new AddBulletView(Contexts.bullet));
+        systems.Add(new UpdateUnitViewPosition(Contexts.unit));
+        systems.Add(new UpdateBulletViewPosition(Contexts.bullet));
+        systems.Add(new ColorizeUnit(Contexts.unit));
+
+        systems.Add(new RemoveBulletView(Contexts.bullet));
+        systems.Add(new RemoveUnitView(Contexts.unit));
+
+        // Destroy systems
+        systems.Add(new DestroyBullets(Contexts.bullet));
+        systems.Add(new DestroyUnits(Contexts.unit));
 
         return systems;
     }
