@@ -1,4 +1,4 @@
-﻿using Entitas.Unity;
+using Entitas.Unity;
 using UnityEngine;
 
 class InputController : MonoBehaviour {

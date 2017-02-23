@@ -1,4 +1,4 @@
-﻿using Entitas;
+using Entitas;
 
 [Input]
 public class InputUnitTargetComponent : IComponent {

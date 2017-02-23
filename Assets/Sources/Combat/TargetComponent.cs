@@ -1,4 +1,4 @@
-﻿using Entitas;
+using Entitas;
 
 [Bullet]
 public class TargetComponent : IComponent{

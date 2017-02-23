@@ -1,4 +1,4 @@
-﻿using Entitas;
+using Entitas;
 
 [Bullet, Unit]
 public class DealDamageComponent : IComponent {

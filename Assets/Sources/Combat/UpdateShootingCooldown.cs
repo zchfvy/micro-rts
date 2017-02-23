@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Entitas;
 
 public class UpdateShootingCooldown : IExecuteSystem {

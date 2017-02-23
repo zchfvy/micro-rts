@@ -1,4 +1,4 @@
-﻿using NLog;
+using NLog;
 using UnityEngine;
 
 namespace NLog.Unity {

@@ -1,4 +1,4 @@
-﻿namespace Entitas.CodeGenerator {
+namespace Entitas.CodeGenerator {
 
     public class ComponentData : CodeGeneratorData {
     }

@@ -1,4 +1,4 @@
-﻿using Entitas;
+using Entitas;
 
 [Unit]
 public class ShootingCooldownComponent : IComponent {

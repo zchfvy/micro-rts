@@ -1,4 +1,4 @@
-﻿using Entitas;
+using Entitas;
 using System;
 
 class Universe : IDisposable {

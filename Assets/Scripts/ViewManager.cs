@@ -1,4 +1,4 @@
-﻿using Entitas;
+using Entitas;
 using Entitas.Unity;
 using System;
 using UnityEngine;

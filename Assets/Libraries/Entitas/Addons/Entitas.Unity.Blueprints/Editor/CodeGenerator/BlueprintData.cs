@@ -1,4 +1,4 @@
-﻿using Entitas.CodeGenerator;
+using Entitas.CodeGenerator;
 
 namespace Entitas.Unity.Blueprints {
 

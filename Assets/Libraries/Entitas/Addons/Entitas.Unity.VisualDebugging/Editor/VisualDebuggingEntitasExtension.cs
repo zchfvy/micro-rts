@@ -1,4 +1,4 @@
-﻿namespace Entitas.Unity.VisualDebugging {
+namespace Entitas.Unity.VisualDebugging {
 
     public static class VisualDebuggingEntitasExtension {
 
