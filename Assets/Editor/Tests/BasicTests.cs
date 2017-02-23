@@ -5,7 +5,7 @@ using UnityEngine;
 [TestFixture]
 class BasicTests {
 
-    private float EPSILON = 0.001f;
+    private const float EPSILON = 0.001f;
 
     private Contexts contexts;
 
@@ -14,10 +14,6 @@ class BasicTests {
         contexts = Contexts.sharedInstance;
         contexts.SetAllContexts();
         contexts.globals.SetClock(1);
-    }
-
-    [TearDown]
-    public void Dispose() {
     }
     
     [TestCase]
