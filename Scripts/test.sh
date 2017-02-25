@@ -8,6 +8,6 @@ project=MicroRts
   -silent-crashes \
   -logFile $(pwd)/unity.log \
   -projectPath $(pwd) \
-  -runEditorTests
+  -runEditorTests \
   -editorTestResultFile "$(pwd)/Test/$project.xml" \
   -quit
