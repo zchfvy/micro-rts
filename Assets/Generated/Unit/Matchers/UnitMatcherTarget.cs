@@ -10,17 +10,17 @@ using Entitas;
 
 public sealed partial class UnitMatcher {
 
-    static IMatcher<UnitEntity> _matcherMoveSpeed;
+    static IMatcher<UnitEntity> _matcherTarget;
 
-    public static IMatcher<UnitEntity> MoveSpeed {
+    public static IMatcher<UnitEntity> Target {
         get {
-            if(_matcherMoveSpeed == null) {
-                var matcher = (Matcher<UnitEntity>)Matcher<UnitEntity>.AllOf(UnitComponentsLookup.MoveSpeed);
+            if(_matcherTarget == null) {
+                var matcher = (Matcher<UnitEntity>)Matcher<UnitEntity>.AllOf(UnitComponentsLookup.Target);
                 matcher.componentNames = UnitComponentsLookup.componentNames;
-                _matcherMoveSpeed = matcher;
+                _matcherTarget = matcher;
             }
 
-            return _matcherMoveSpeed;
+            return _matcherTarget;
         }
     }
 }

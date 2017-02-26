@@ -6,24 +6,24 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public partial class BulletEntity {
+public partial class UnitEntity {
 
-    public TargetComponent target { get { return (TargetComponent)GetComponent(BulletComponentsLookup.Target); } }
-    public bool hasTarget { get { return HasComponent(BulletComponentsLookup.Target); } }
+    public TargetComponent target { get { return (TargetComponent)GetComponent(UnitComponentsLookup.Target); } }
+    public bool hasTarget { get { return HasComponent(UnitComponentsLookup.Target); } }
 
     public void AddTarget(UnitEntity newTarget) {
-        var component = CreateComponent<TargetComponent>(BulletComponentsLookup.Target);
+        var component = CreateComponent<TargetComponent>(UnitComponentsLookup.Target);
         component.value = newTarget;
-        AddComponent(BulletComponentsLookup.Target, component);
+        AddComponent(UnitComponentsLookup.Target, component);
     }
 
     public void ReplaceTarget(UnitEntity newTarget) {
-        var component = CreateComponent<TargetComponent>(BulletComponentsLookup.Target);
+        var component = CreateComponent<TargetComponent>(UnitComponentsLookup.Target);
         component.value = newTarget;
-        ReplaceComponent(BulletComponentsLookup.Target, component);
+        ReplaceComponent(UnitComponentsLookup.Target, component);
     }
 
     public void RemoveTarget() {
-        RemoveComponent(BulletComponentsLookup.Target);
+        RemoveComponent(UnitComponentsLookup.Target);
     }
 }

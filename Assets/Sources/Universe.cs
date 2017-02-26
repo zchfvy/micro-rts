@@ -50,17 +50,15 @@ class Universe : IDisposable {
         systems.Add(new UpdateShootingCooldown(Contexts.unit, Contexts.globals));
         systems.Add(new UnitAttackSystem(Contexts.unit, Contexts.bullet));
         systems.Add(new UpdateBulletPosition(Contexts.bullet, Contexts.globals));
-        systems.Add(new DealUnitDamage(Contexts.unit));
+        systems.Add(new DealUnitDamage(Contexts.bullet));
 
 
         // View systems, just graphical
         systems.Add(new AddUnitView(Contexts.unit));
         systems.Add(new AddBulletView(Contexts.bullet));
         systems.Add(new UpdateUnitViewPosition(Contexts.unit));
-        systems.Add(new UpdateBulletViewPosition(Contexts.bullet));
         systems.Add(new ColorizeUnit(Contexts.unit));
 
-        systems.Add(new RemoveBulletView(Contexts.bullet));
         systems.Add(new RemoveUnitView(Contexts.unit));
 
         // Destroy systems

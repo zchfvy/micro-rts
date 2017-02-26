@@ -14,9 +14,10 @@ public static class BulletComponentsLookup {
     public const int MoveSpeed = 3;
     public const int Position = 4;
     public const int Target = 5;
-    public const int View = 6;
+    public const int TimeToHit = 6;
+    public const int View = 7;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 8;
 
     public static readonly string[] componentNames = {
         "Asset",
@@ -25,6 +26,7 @@ public static class BulletComponentsLookup {
         "MoveSpeed",
         "Position",
         "Target",
+        "TimeToHit",
         "View"
     };
 
@@ -35,6 +37,7 @@ public static class BulletComponentsLookup {
         typeof(MoveSpeedComponent),
         typeof(PositionComponent),
         typeof(TargetComponent),
+        typeof(TimeToHitComponent),
         typeof(ViewComponent)
     };
 }

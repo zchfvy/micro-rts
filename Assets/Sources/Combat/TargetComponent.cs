@@ -1,6 +1,6 @@
 using Entitas;
 
-[Bullet]
+[Unit, Bullet]
 public class TargetComponent : IComponent{
-    public UnitEntity target;
+    public UnitEntity value;
 }

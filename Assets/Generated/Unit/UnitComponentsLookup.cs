@@ -16,10 +16,11 @@ public static class UnitComponentsLookup {
     public const int MoveSpeed = 5;
     public const int Position = 6;
     public const int ShootingCooldown = 7;
-    public const int Team = 8;
-    public const int View = 9;
+    public const int Target = 8;
+    public const int Team = 9;
+    public const int View = 10;
 
-    public const int TotalComponents = 10;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "Asset",
@@ -30,6 +31,7 @@ public static class UnitComponentsLookup {
         "MoveSpeed",
         "Position",
         "ShootingCooldown",
+        "Target",
         "Team",
         "View"
     };
@@ -43,6 +45,7 @@ public static class UnitComponentsLookup {
         typeof(MoveSpeedComponent),
         typeof(PositionComponent),
         typeof(ShootingCooldownComponent),
+        typeof(TargetComponent),
         typeof(Team),
         typeof(ViewComponent)
     };

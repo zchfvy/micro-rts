@@ -10,17 +10,17 @@ using Entitas;
 
 public sealed partial class BulletMatcher {
 
-    static IMatcher<BulletEntity> _matcherMoveSpeed;
+    static IMatcher<BulletEntity> _matcherTimeToHit;
 
-    public static IMatcher<BulletEntity> MoveSpeed {
+    public static IMatcher<BulletEntity> TimeToHit {
         get {
-            if(_matcherMoveSpeed == null) {
-                var matcher = (Matcher<BulletEntity>)Matcher<BulletEntity>.AllOf(BulletComponentsLookup.MoveSpeed);
+            if(_matcherTimeToHit == null) {
+                var matcher = (Matcher<BulletEntity>)Matcher<BulletEntity>.AllOf(BulletComponentsLookup.TimeToHit);
                 matcher.componentNames = BulletComponentsLookup.componentNames;
-                _matcherMoveSpeed = matcher;
+                _matcherTimeToHit = matcher;
             }
 
-            return _matcherMoveSpeed;
+            return _matcherTimeToHit;
         }
     }
 }

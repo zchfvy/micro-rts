@@ -32,7 +32,7 @@ public class UpdateUnitShooting : IExecuteSystem {
             var target = targetIndex.GetEntities(enemyTeam).FirstOrDefault();
 
             if (target != null) {
-                shooter.ReplaceAttackTarget(target);  // TODO : Add instead of replace ??
+                shooter.ReplaceTarget(target);  // TODO : Add instead of replace ??
             }
         }
     }

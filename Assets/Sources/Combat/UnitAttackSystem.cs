@@ -14,18 +14,18 @@ public class UnitAttackSystem : ReactiveSystem<UnitEntity> {
             entity.AddShootingCooldown(0.25f); // TODO  - this is temporaty value
             var bullet = _bullets.CreateEntity();
             bullet.AddPosition(entity.position.value);
-            bullet.AddTarget(entity.attackTarget.target);
+            bullet.AddTarget(entity.target.value);
             bullet.AddDealDamage(0.3f);
-            bullet.AddMoveSpeed(10.0f);
+            bullet.AddTimeToHit(0.3f);
             bullet.AddAsset("Dot");
         }
     }
 
     protected override bool Filter(UnitEntity entity) {
-        return ! entity.hasShootingCooldown;
+        return !entity.hasShootingCooldown;
     }
 
     protected override Collector<UnitEntity> GetTrigger(IContext<UnitEntity> context) {
-        return context.CreateCollector(UnitMatcher.AttackTarget);
+        return context.CreateCollector(UnitMatcher.Target);
     }
 }
